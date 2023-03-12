@@ -24,7 +24,7 @@ buttonStart.addEventListener("click", async (e) => {
       // audio: false,
     });
     h1.textContent = "Hiuhiu";
-    console.log("Noto");
+    console.log("it works");
   } catch (error) {
     h1.textContent = "noooo :(";
   }
