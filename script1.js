@@ -19,10 +19,13 @@ let arr = [];
 if (navigator.mediaDevices) {
   h1.textContent = "MediaDevices are  supported";
   // return;
+} else {
+  h1.textContent = "not supported";
 }
 
 buttonStart.addEventListener("click", async (e) => {
   e.preventDefault();
+  // alert(navigator.mediaDevices);
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: true,
@@ -30,7 +33,7 @@ buttonStart.addEventListener("click", async (e) => {
     h1.textContent = "Hiuhiu";
     console.log("it works");
   } catch (error) {
-    h1.textContent = "noooo :(";
+    h1.textContent = error;
   }
 });
 
