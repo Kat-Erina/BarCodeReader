@@ -16,12 +16,16 @@ let arr = [];
 //   }
 // });
 
+if (navigator.mediaDevices) {
+  h1.textContent = "MediaDevices are  supported";
+  // return;
+}
+
 buttonStart.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: true,
-      // audio: false,
     });
     h1.textContent = "Hiuhiu";
     console.log("it works");
